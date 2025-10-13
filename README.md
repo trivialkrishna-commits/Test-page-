@@ -15,31 +15,29 @@
   <button onclick="nextCard()">Next / Show Answer</button>
 
   <script>
-    const flashcards = [
+    var flashcards = [
       { question: "What is the powerhouse of the cell?", answer: "Mitochondria" },
       { question: "What molecule carries genetic information?", answer: "DNA" },
       { question: "What is the process of cell division in somatic cells called?", answer: "Mitosis" }
     ];
 
-    let current = 0;
-    let showingAnswer = false;
+    var current = 0;
+    var showingAnswer = false;
+    var card = document.getElementById('card');
+
+    // Initialize first card
+    card.innerHTML = flashcards[current].question;
 
     function nextCard() {
-      const card = document.getElementById('card');
       if (!showingAnswer) {
-        // Show answer
-        card.innerText = flashcards[current].answer;
+        card.innerHTML = flashcards[current].answer + " "; // extra space forces repaint
         showingAnswer = true;
       } else {
-        // Move to next question
         current = (current + 1) % flashcards.length;
-        card.innerText = flashcards[current].question;
+        card.innerHTML = flashcards[current].question;
         showingAnswer = false;
       }
     }
-
-    // Initialize first card
-    document.getElementById('card').innerText = flashcards[current].question;
   </script>
 </body>
 </html>
