@@ -31,7 +31,7 @@
     <p>Select a chapter:</p>
     <button class="chapter-btn" onclick="startChapter('Morphology')">Morphology</button>
     <button class="chapter-btn" onclick="startChapter('Skeletal System')">Skeletal System</button>
-    <button class="chapter-btn" onclick="startChapter('Circulation')">Circulation</button>
+    <button class="chapter-btn" onclick="startChapter('Chemical coordination')">Chemical coordination</button>
   </div>
 
   <div id="flashcardInterface" style="display:none;">
